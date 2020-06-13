@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="icon" href="assets/images/favicon/1.png" type="image/x-icon">
+            <link rel="shortcut icon" href="assets/images/favicon/1.png" type="image/x-icon">
+            <title>Vapehan | Email template </title>
+            <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+
+            <style type="text/css">
+                body{
+                    text-align: center;
+                    margin: 0 auto;
+                    width: 650px;
+                    font-family: 'Open Sans', sans-serif;
+                    background-color: #e2e2e2;
+                    display: block;
+                }
+                ul{
+                    margin:0;
+                    padding: 0;
+                }
+                li{
+                    display: inline-block;
+                    text-decoration: unset;
+                }
+                a{
+                    text-decoration: none;
+                }
+                p{
+                    margin: 15px 0;
+                }
+
+                h5{
+                    color:#444;
+                    text-align:left;
+                    font-weight:400;
+                }
+                .text-center{
+                    text-align: center
+                }
+                .main-bg-light{
+                    background-color: #eeeeee;
+                }
+                .title{
+                    color: #444444;
+                    font-size: 22px;
+                    font-weight: bold;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                    padding-bottom: 0;
+                    text-transform: uppercase;
+                    display: inline-block;
+                    line-height: 1;
+                }
+                table{
+                    margin-top:30px
+                }
+                table.top-0{
+                    margin-top:0;
+                }
+                table.order-detail , .order-detail th , .order-detail td {
+                    border: 1px solid #ddd;
+                    border-collapse: collapse;
+                }
+                .order-detail th{
+                    font-size:16px;
+                    padding:15px;
+                    text-align:center;
+                }
+                .footer-social-icon tr td img{
+                    margin-left:5px;
+                    margin-right:5px;
+                }
+                .example-full-width {
+                    width: 100%;
+                }
+                .kt-separator.kt-separator--dashed {
+                    border-bottom: 1px dashed #ebedf2;
+                    height: 0;
+                    margin: 5px 0;
+                    line-height: 40px;
+                }
+                .data-title {
+                    font-weight: bolder;
+                    font-size: 15px;
+                }
+                .main-margin {
+                    margin-right: 30px !important;
+                }
+                .example-margin {
+                    margin: 0 10px;
+                }
+            </style>
+        </head>
+        <body style="margin: 20px auto; width: 60%;">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" style="padding: 0 30px;background-color: #fff; -webkit-box-shadow: 0px 0px 14px -4px rgba(0, 0, 0, 0.2705882353);box-shadow: 0px 0px 14px -4px rgba(0, 0, 0, 0.2705882353);width: 100%;">
+                <tbody>
+                    <tr>
+                        <td>
+                            <table align="center" border="0" cellpadding="0" cellspacing="0" >
+                                <tr align="center">
+                                    <td>
+                                        <img src="https://api.vapehan.com/api/images/email/vapehan.png" alt="" style="width: 100px; height: 100px; margin-bottom: 30px;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center">
+                                        <img src="https://api.vapehan.com/api/images/email/success.png" alt="">
+                                    </td>
+                                </tr>
+                                <tr align="center">
+                                    <td>
+                                        <h2 class="title">terima kasih telah mendaftar</h2>
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+
+                                    <td>
+                                        <div style="border-top:1px solid #777;height:1px;margin-top: 30px;">
+                                    </td>
+                                </tr>
+
+                            </table>
+                            <table border="0" align="center" cellpadding="0" cellspacing="0" >
+                                <tr>
+                                    <td>
+                                        <h2 class="title">Detail Data</h2>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="example-full-width" cellspacing="0">
+                                <tr class="kt-separator kt-separator--dashed data-title">
+                                Data Pemilik
+                                </tr>
+                                <tr class="kt-separator kt-separator--dashed">
+                                    <td style="width: 50%;" class="main-margin example-margin">Nama Pemilik</td>
+                                    <td style="width: 50%;">{{register.namalengkap}}</td>
+                                </tr>
+                                <tr class="kt-separator kt-separator--dashed">
+                                    <td style="width: 50%;" class="main-margin example-margin">Alamat</td>
+                                    <td style="width: 50%;">{{register.alamat}}, {{register.kota}}, {{register.provinsi}}</td>
+                                </tr>
+                                <tr class="kt-separator kt-separator--dashed">
+                                    <td style="width: 50%;" class="main-margin example-margin">No HP</td>
+                                    <td style="width: 50%;">{{register.hp}}</td>
+                                </tr>
+                                <tr class="kt-separator kt-separator--dashed">
+                                    <td style="width: 50%;" class="main-margin example-margin">Email</td>
+                                    <td style="width: 50%;">{{register.email}}</td>
+                                </tr>
+                                <tr class="kt-separator kt-separator--dashed data-title">
+                                Data Toko
+                                </tr>
+                                <tr class="kt-separator kt-separator--dashed">
+                                    <td style="width: 50%;" class="main-margin example-margin">Nama Toko</td>
+                                    <td style="width: 50%;">{{register.toko.namatoko}}</td>
+                                </tr>
+                                <tr class="kt-separator kt-separator--dashed">
+                                    <td style="width: 50%;" class="main-margin example-margin">Alamat</td>
+                                    <td style="width: 50%;">{{register.toko.alamat}}, {{register.toko.kota}}, {{register.toko.provinsi}}</td>
+                                </tr>
+                                <tr class="kt-separator kt-separator--dashed">
+                                    <td style="width: 50%;" class="main-margin example-margin">No HP</td>
+                                    <td style="width: 50%;">{{register.toko.hp}}</td>
+                                </tr>
+                                <tr class="kt-separator kt-separator--dashed">
+                                    <td style="width: 50%;" class="main-margin example-margin">Email</td>
+                                    <td style="width: 50%;">{{register.toko.email}}</td>
+                                </tr>
+                                <tr class="kt-separator kt-separator--dashed">
+                                    <td style="width: 50%;" class="main-margin example-margin">Jenis Toko</td>
+                                    <td style="width: 50%;" >{{register.toko.spesifikasi}}</td>
+                                </tr>
+                                <tr class="kt-separator kt-separator--dashed data-title">
+                                Sosmed Dan Online Shop
+                                </tr>
+                                <tr class="kt-separator kt-separator--dashed">
+                                    <td style="width: 50%;" class="main-margin example-margin">Instagram</td>
+                                    <td style="width: 50%;">{{register.sosmed.instagram}}</td>
+                                </tr>
+                                <tr class="kt-separator kt-separator--dashed">
+                                    <td style="width: 50%;" class="main-margin example-margin">Youtube</td>
+                                    <td style="width: 50%;">{{register.sosmed.youtube}}</td>
+                                </tr>
+                                <tr class="kt-separator kt-separator--dashed">
+                                    <td style="width: 50%;" class="main-margin example-margin">Facebook</td>
+                                    <td style="width: 50%;">{{register.sosmed.facebook}}</td>
+                                </tr>
+                                <tr class="kt-separator kt-separator--dashed">
+                                    <td style="width: 50%;" class="main-margin example-margin">Tokopedia</td>
+                                    <td style="width: 50%;">{{register.sosmed.tokopedia}}</td>
+                                </tr>
+                                <tr class="kt-separator kt-separator--dashed">
+                                    <td style="width: 50%;" class="main-margin example-margin">Bukalapak</td>
+                                    <td style="width: 50%;">{{register.sosmed.bukalapak}}</td>
+                                </tr>
+                                <tr class="kt-separator kt-separator--dashed">
+                                    <td style="width: 50%;" class="main-margin example-margin">Shopee</td>
+                                    <td style="width: 50%;">{{register.sosmed.shopee}}</td>
+                                </tr>
+                                <tr class="kt-separator kt-separator--dashed">
+                                    <td style="width: 50%;" class="main-margin example-margin">Lain nya</td>
+                                    <td style="width: 50%;">{{register.sosmed.etc}}</td>
+                                </tr>
+                                <tr class="kt-separator kt-separator--dashed data-title">
+                                Pengiriman
+                                </tr>
+
+                                {{#each courier}}
+                                <tr class="kt-separator kt-separator--dashed">
+                                    <td style="width: 50%;" class="main-margin example-margin">{{courier}}</td>
+                                </tr>
+                                {{/each}}
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="main-bg-light text-center top-0" style="margin-top: 10px;"  align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                    <td style="padding: 30px;">
+                        <div>
+                            <h4 class="title" style="margin:0;text-align: center;">Follow us</h4>
+                        </div>
+                        <table border="0" cellpadding="0" cellspacing="0" class="footer-social-icon" align="center" class="text-center" style="margin-top:20px;">
+                            <tr>
+                                <td>
+                                    <a href="https://www.facebook.com/vapehan/" target="_blank"><img src="https://api.vapehan.com/api/images/email/facebook.png" alt=""></a>
+                                </td>
+                                <td>
+                                    <a target="_blank" href="https://www.youtube.com/channel/UCmczby514u9CnJcFO0s0Cxg"><img src="https://api.vapehan.com/api/images/email/youtube.png" alt=""></a>
+                                </td>
+                                <td>
+                                    <a href="https://www.instagram.com/vapehan.official/" target="_blank"><img src="https://api.vapehan.com/api/images/email/instagram.png" alt=""></a>
+                                </td>
+                                <td>
+                                    <a target="_blank" href="https://www.tokopedia.com/vapehan?source=universe&st=product"><img src="https://api.vapehan.com/api/images/email/tokopedia.png" alt=""></a>
+                                </td>
+                                <td>
+                                    <a target="_blank" href="https://shopee.co.id/vapehan"><img src="https://api.vapehan.com/api/images/email/shopee.png" alt=""></a>
+                                </td>
+                                <td>
+                                    <a target="_blank" href="https://www.bukalapak.com/u/vapehan"><img src="https://api.vapehan.com/api/images/email/bukalapak.png" alt=""></a>
+                                </td>
+                            </tr>
+                        </table>
+                        <div style="border-top: 1px solid #ddd; margin: 20px auto 0;"></div>
+                        <table  border="0" cellpadding="0" cellspacing="0" width="100%" style="margin: 20px auto 0;" >
+                            <tr>
+                                <td>
+                                    <p style="font-size:13px; margin:0;">2019 - {{year}} Copy Right by Vapehan powerd by HSG</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </body>
+    </html>

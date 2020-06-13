@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="icon" href="assets/images/favicon/1.png" type="image/x-icon">
+            <link rel="shortcut icon" href="assets/images/favicon/1.png" type="image/x-icon">
+            <title>Vapehan | Email template </title>
+            <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+
+            <style type="text/css">
+                body{
+                    text-align: center;
+                    margin: 0 auto;
+                    width: 650px;
+                    font-family: 'Open Sans', sans-serif;
+                    background-color: #e2e2e2;
+                    display: block;
+                }
+                ul{
+                    margin:0;
+                    padding: 0;
+                }
+                li{
+                    display: inline-block;
+                    text-decoration: unset;
+                }
+                a{
+                    text-decoration: none;
+                }
+                p{
+                    margin: 15px 0;
+                }
+
+                h5{
+                    color:#444;
+                    text-align:left;
+                    font-weight:400;
+                }
+                .text-center{
+                    text-align: center
+                }
+                .main-bg-light{
+                    background-color: #eeeeee;
+                }
+                .title{
+                    color: #444444;
+                    font-size: 22px;
+                    font-weight: bold;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                    padding-bottom: 0;
+                    text-transform: uppercase;
+                    display: inline-block;
+                    line-height: 1;
+                }
+                table{
+                    margin-top:30px
+                }
+                table.top-0{
+                    margin-top:0;
+                }
+                table.order-detail , .order-detail th , .order-detail td {
+                    border: 1px solid #ddd;
+                    border-collapse: collapse;
+                }
+                .order-detail th{
+                    font-size:16px;
+                    padding:15px;
+                    text-align:center;
+                }
+                .footer-social-icon tr td img{
+                    margin-left:5px;
+                    margin-right:5px;
+                }
+            </style>
+        </head>
+        <body style="margin: 20px auto; width: 60%;">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" style="padding: 0 30px;background-color: #fff; -webkit-box-shadow: 0px 0px 14px -4px rgba(0, 0, 0, 0.2705882353);box-shadow: 0px 0px 14px -4px rgba(0, 0, 0, 0.2705882353);width: 100%;">
+                <tbody>
+                    <tr>
+                        <td>
+                            <table align="center" border="0" cellpadding="0" cellspacing="0" >
+                                <tr align="center">
+                                    <td>
+                                        <img src="https://api.vapehan.com/api/images/email/vapehan.png" alt="" style="width: 100px; height: 100px; margin-bottom: 30px;">
+                                    </td>
+                                </tr>
+                                <tr align="center">
+                                    <td>
+                                        <h2 class="title">Verification Payment</h2>
+                                    </td>
+                                </tr>
+                                <tr align="center">
+                                    <td>
+                                        <p style="color: red;">Need verification payment for </p>
+                                        <p>Transaction ID: {{order.id_order}}</p>
+                                        <p>Date: {{date}}</p>
+                                        <p>Payment: {{payment}}</p>
+                                        <p>Name: {{name}}</p>
+                                        <p>Note: {{note}}</p>
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td>
+                                        <div style="border-top:1px solid #777;height:1px;margin-top: 30px;">
+                                    </td>
+                                </tr>
+
+                            </table>
+                            <table border="0" align="center" cellpadding="0" cellspacing="0" >
+                                <tr>
+                                    <td>
+                                        <h2 class="title">ORDER DETAILS</h2>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="order-detail" width="100%" border="0" cellpadding="0" cellspacing="0"  align="left">
+                                <tr align="left">
+                                    <th style="font-size: 14px;">Image</th>
+                                    <th style="font-size: 14px; padding-left: 15px;">Product</th>
+                                    <th style="font-size: 14px;">Quantity</th>
+                                    <th style="font-size: 14px;">Price </th>
+                                    <th style="font-size: 14px;">Sub Total</th>
+                                </tr>
+                                {{#each cart}}
+                                <tr>
+                                    <td valign="center" align="center">
+                                        <img src="https://api.vapehan.com/api/images/product/{{image}}" alt="" width="70">
+                                    </td>
+                                    <td valign="top" style="padding-left: 15px;">
+                                        <h5 style="margin-top: 15px;font-size: 12px;">{{prodName}}</h5>
+                                    </td>
+                                    <td valign="top" style="padding-left: 15px;">
+                                        <h5 style="font-size: 14px; color:#444;margin-top:15px;    margin-bottom: 0px;">QTY : <span> {{quantity}}</span> </h5>
+                                        <h5 style="font-size: 14px; color:#444;margin-top: 10px;">Weight : <span>{{weight}} G</span></h5>
+                                    </td>
+                                    <td valign="top" style="padding-left: 15px;">
+                                        <h5 style="font-size: 14px; color:#444;margin-top:15px"><b>Rp. {{price}}</b></h5>
+                                    </td>
+                                    <td valign="top" style="padding-left: 15px;">
+                                        <h5 style="font-size: 14px; color:#444;margin-top:15px"><b>Rp. {{subTotal}}</b></h5>
+                                    </td>
+                                </tr>
+                                {{/each}}
+
+                                <tr>
+                                    <td colspan="2" style="line-height: 49px;font-size: 13px;color: #000000;padding-left: 20px;text-align:left;border-right: unset;">Total QTY :</td>
+                                        <td colspan="3" class="price" style="line-height: 49px;text-align: right;padding-right: 28px;font-size: 13px;color: #000000;text-align:right;border-left: unset;"><b>{{order.totalQTY}}</b></td>
+                                </tr>
+                                {{#if weightkg }}
+                                <tr>
+                                    <td colspan="2" style="line-height: 49px;font-family: Arial;font-size: 13px;color: #000000;padding-left: 20px;text-align:left;border-right: unset;">Total Weight: </td>
+                                    <td colspan="3" class="price" style="line-height: 49px;text-align: right;padding-right: 28px;font-size: 13px;color: #000000;text-align:right;border-left: unset;">{{order.totalWeight}} Kg</td>
+                                </tr>
+				{{/if}}
+				{{#if weightg }}
+                                <tr>
+                                    <td colspan="2" style="line-height: 49px;font-family: Arial;font-size: 13px;color: #000000;padding-left: 20px;text-align:left;border-right: unset;">Total Weight: </td>
+                                    <td colspan="3" class="price" style="line-height: 49px;text-align: right;padding-right: 28px;font-size: 13px;color: #000000;text-align:right;border-left: unset;">{{order.totalWeight}} G</td>
+                                </tr>
+				{{/if}}
+                                <tr>
+                                    <td colspan="2" style="line-height: 49px;font-size: 13px;color: #000000;
+                                        padding-left: 20px;text-align:left;border-right: unset;">Shipping :</td>
+                                        <td colspan="3" class="price" style="
+                                            line-height: 49px;text-align: right;padding-right: 28px;font-size: 13px;color: #000000;text-align:right;border-left: unset;"><b>{{order.courier}} {{order.courier_service}} - Rp. {{order.totalOngkir}}</b></td>
+                                </tr>
+                                
+                                {{#if amountVoucher }}
+                                <tr>
+                                    <td colspan="2" style="line-height: 49px;font-size: 13px;color: #000000;
+                                        padding-left: 20px;text-align:left;border-right: unset;">Voucher :</td>
+                                        <td colspan="3" class="price" style="
+                                            line-height: 49px;text-align: right;padding-right: 28px;font-size: 13px;color: #000000;text-align:right;border-left: unset;"><span style="padding-right: 10px;">{{voucher}} </span> Rp. {{discount}}</td>
+                                </tr>
+                                {{/if}}
+                                {{#if amountVoucher }}
+                                <tr>
+                                    <td colspan="2" style="line-height: 49px;font-size: 13px;color: #000000; padding-left: 20px;text-align:left;border-right: unset;">TOTAL Ammount :</td>
+                                        <td colspan="3" class="price" style="line-height: 49px;text-align: right;padding-right: 28px;font-size: 13px;color: #000000;text-align:right;border-left: unset;"><del style="font-size: 12px; font-weight: 300; color:rgba(87, 87, 86, 0.911); padding-right: 5px;">Rp. {{order.Total}} </del> <b>Rp. {{amountVoucher}}</b></td>
+                                </tr>
+
+                                {{else}}
+                                    <tr >
+                                    <td colspan="2" style="line-height: 49px;font-size: 13px;color: #000000; padding-left: 20px;text-align:left;border-right: unset;">TOTAL Ammount :</td>
+                                        <td colspan="3" class="price" style="line-height: 49px;text-align: right;padding-right: 28px;font-size: 13px;color: #000000;text-align:right;border-left: unset;"><b>Rp. {{order.Total}}</b></td>
+                                </tr>
+                                {{/if}}
+
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="main-bg-light text-center top-0" style="margin-top: 10px;"  align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                    <td style="padding: 30px;">
+                        <div>
+                            <h4 class="title" style="margin:0;text-align: center;">Follow us</h4>
+                        </div>
+                        <table border="0" cellpadding="0" cellspacing="0" class="footer-social-icon" align="center" class="text-center" style="margin-top:20px;">
+                            <tr>
+                                <td>
+                                    <a href="https://www.facebook.com/vapehan/" target="_blank"><img src="https://api.vapehan.com/api/images/email/facebook.png" alt=""></a>
+                                </td>
+                                <td>
+                                    <a target="_blank" href="https://www.youtube.com/channel/UCmczby514u9CnJcFO0s0Cxg"><img src="https://api.vapehan.com/api/images/email/youtube.png" alt=""></a>
+                                </td>
+                                <td>
+                                    <a href="https://www.instagram.com/vapehan.official/" target="_blank"><img src="https://api.vapehan.com/api/images/email/instagram.png" alt=""></a>
+                                </td>
+                                <td>
+                                    <a target="_blank" href="https://www.tokopedia.com/vapehan?source=universe&st=product"><img src="https://api.vapehan.com/api/images/email/tokopedia.png" alt=""></a>
+                                </td>
+                                <td>
+                                    <a target="_blank" href="https://shopee.co.id/vapehan"><img src="https://api.vapehan.com/api/images/email/shopee.png" alt=""></a>
+                                </td>
+                                <td>
+                                    <a target="_blank" href="https://www.bukalapak.com/u/vapehan"><img src="https://api.vapehan.com/api/images/email/bukalapak.png" alt=""></a>
+                                </td>
+                            </tr>
+                        </table>
+                        <div style="border-top: 1px solid #ddd; margin: 20px auto 0;"></div>
+                        <table  border="0" cellpadding="0" cellspacing="0" width="100%" style="margin: 20px auto 0;" >
+                            <tr>
+                                <td>
+                                    <p style="font-size:13px; margin:0;">2019 - {{year}} Copy Right by Vapehan powerd by HSG</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </body>
+    </html>
